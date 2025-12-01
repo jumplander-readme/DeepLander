@@ -30,9 +30,8 @@
 <br />
 
 <!-- SCREENSHOT SECTION -->
-<!-- نکته: عکس اسکرین‌شات را در پوشه assets یا روت پروژه آپلود کنید و نام آن را جایگزین کنید -->
 <div align="center">
-  <img src="./assets/preview.png" alt="JumpLander Website Preview" width="100%" style="border-radius: 18px; border: 1px solid #233521;">
+  <img src="https://www.jumplander.org/core-v" alt="JumpLander Website Preview" width="100%" style="border-radius: 18px; border: 1px solid #233521;">
 </div>
 
 <br />
