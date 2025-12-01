@@ -55,9 +55,6 @@
 ```text
 jumplander.github.io/
 ├── index.html          # فایل اصلی (Single Page Application)
-├── assets/             # پوشه تصاویر و منابع
-│   ├── preview.png     # تصویر پیش‌نمایش سایت
-│   └── logo.svg        # لوگوی برند
 ├── README.md           # مستندات پروژه
 └── CNAME               # تنظیمات دامنه (در صورت اتصال به دامنه شخصی)
 ```
