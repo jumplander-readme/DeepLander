@@ -1,38 +1,190 @@
-<section id="learning-github" dir="rtl" lang="fa">
-  <h1>یادگیری GitHub با پروژه DeepLander</h1>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>DeepLander Wiki</title>
+  <style>
+    body {
+      font-family: "Tahoma", sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #2ecc71; /* سبز روشن */
+      color: #fff; /* متن سفید برای کنتراست */
+      text-align: center; /* وسط چین کردن متن */
+    }
+    section {
+      background-color: rgba(0,0,0,0.2); /* نیمه شفاف برای زیبایی */
+      border-radius: 12px;
+      padding: 25px;
+      margin: 30px auto;
+      width: 90%;
+      max-width: 900px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    h1 {
+      color: #fff;
+      margin-bottom: 15px;
+      font-size: 2em;
+    }
+    h2 {
+      color: #f0f0f0;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    ul, ol {
+      margin-left: 0;
+      display: inline-block;
+      text-align: left;
+    }
+    pre {
+      background-color: rgba(255,255,255,0.2);
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+      text-align: left;
+    }
+    code {
+      font-family: monospace;
+      background-color: rgba(255,255,255,0.2);
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
 
-  <p>
-    پروژه <strong>DeepLander</strong> علاوه بر معرفی قابلیت‌های هوش مصنوعی JumpLander، یک پروژه آموزشی حرفه‌ای است تا با GitHub و مدیریت پروژه‌های نرم‌افزاری آشنا شوید.
-  </p>
+  <!-- ویکی ۱: Getting Started -->
+  <section id="getting-started">
+    <h1>شروع کار با DeepLander</h1>
+    <p>این صفحه راهنمای شروع سریع پروژه <strong>DeepLander</strong> است. هدف این بخش این است که هر کاربر، حتی بدون تجربه قبلی، بتواند پروژه را روی سیستم خود اجرا و بررسی کند.</p>
+    <h2>1️⃣ پیش‌نیازها</h2>
+    <ul>
+      <li>مرورگر مدرن: Chrome, Firefox, Safari یا Edge</li>
+      <li>اتصال به اینترنت برای بارگذاری منابع آنلاین</li>
+      <li>Git نصب شده روی سیستم (برای کلون کردن ریپازیتوری)</li>
+      <li>توصیه حرفه‌ای: نصب Visual Studio Code یا هر ویرایشگر متن پیشرفته</li>
+    </ul>
+    <h2>2️⃣ کلون کردن ریپازیتوری</h2>
+    <pre><code>git clone https://github.com/jumplander-readme/DeepLander.git
+cd DeepLander</code></pre>
+    <h2>3️⃣ مشاهده پروژه</h2>
+    <ol>
+      <li>فایل <code>index.html</code> را در مرورگر باز کنید</li>
+      <li>یا از افزونه Live Server در VS Code استفاده کنید</li>
+    </ol>
+    <h2>4️⃣ نکات حرفه‌ای</h2>
+    <ul>
+      <li>برای هر تغییر، Branch جداگانه بسازید:
+        <pre><code>git checkout -b feature/your-feature-name</code></pre>
+      </li>
+      <li>Commit با پیام کوتاه و واضح:
+        <pre><code>git commit -m "Add Persian introduction section for DeepLander"</code></pre>
+      </li>
+      <li>Pull Request بسازید تا تغییرات بررسی و Merge شود</li>
+    </ul>
+    <h2>5️⃣ منابع آموزشی مرتبط</h2>
+    <ul>
+      <li><a href="https://docs.github.com/en/get-started/quickstart" target="_blank" rel="noopener">GitHub Docs – Getting Started</a></li>
+      <li><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages Documentation</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank" rel="noopener">HTML Basics – MDN</a></li>
+    </ul>
+  </section>
 
-  <h2>مفاهیم کلیدی GitHub</h2>
-  <ul>
-    <li><strong>Issues:</strong> مدیریت وظایف، باگ‌ها و پیشنهادات کاربران</li>
-    <li><strong>Pull Requests:</strong> ارائه تغییرات، بررسی کد و ادغام با شاخه اصلی</li>
-    <li><strong>Branches:</strong> ساخت مسیر مستقل برای توسعه و ویژگی‌های جدید</li>
-    <li><strong>Projects:</strong> مدیریت نقشه راه و وضعیت وظایف</li>
-    <li><strong>Wiki:</strong> مستندسازی پروژه و ارائه راهنما برای کاربران و مشارکت‌کنندگان</li>
-  </ul>
+  <!-- ویکی ۲: About DeepLander -->
+  <section id="about-deeplander">
+    <h1>About DeepLander</h1>
+    <p><strong>DeepLander</strong> یک وب‌سایت در حال توسعه است که با استفاده از <a href="https://jumplander.org" target="_blank" rel="noopener">هوش مصنوعی اختصاصی JumpLander</a> ساخته می‌شود.</p>
+    <p>هدف پروژه ارائه یک <strong>Landing Page هوشمند و آموزشی</strong> برای کاربران فارسی‌زبان است.</p>
+    <h2>اهداف اصلی پروژه</h2>
+    <ul>
+      <li>معرفی قابلیت‌ها و روش استفاده از هوش مصنوعی JumpLander</li>
+      <li>نمونه عملی Landing Page هوشمند و بهینه</li>
+      <li>آموزش GitHub و فرآیند مشارکت در پروژه</li>
+    </ul>
+    <h2>اهمیت برای کاربران فارسی‌زبان</h2>
+    <ul>
+      <li>پشتیبانی کامل از راست‌به‌چپ (RTL)</li>
+      <li>متن و لحن فارسی قابل فهم</li>
+      <li>نمونه واقعی از پروژه در حال توسعه</li>
+      <li>افزایش آگاهی از کاربردهای هوش مصنوعی</li>
+    </ul>
+  </section>
 
-  <h2>مثال عملی با DeepLander</h2>
-  <ol>
-    <li>Issue: <em>[Content] معرفی DeepLander</em></li>
-    <li>Branch: <code>content/deeplander-introduction-fa</code></li>
-    <li>Commit: اضافه کردن متن معرفی فارسی
-      <pre><code>git commit -m "Add Persian introduction section"</code></pre>
-    </li>
-    <li>Pull Request: Merge به <code>main</code> پس از بررسی</li>
-  </ol>
+  <!-- ویکی ۳: Roadmap -->
+  <section id="deeplander-roadmap">
+    <h1>Roadmap پروژه DeepLander</h1>
+    <ul>
+      <li><strong>MVP – معرفی اولیه:</strong> آماده‌سازی بخش معرفی و اولین نسخه HTML فارسی</li>
+      <li><strong>نسخه 1.1:</strong> اضافه کردن آموزش HTML/CSS و نکات GitHub</li>
+      <li><strong>نسخه 1.2:</strong> بهبود UX و ریسپانسیو</li>
+      <li><strong>نسخه 2.0:</strong> افزودن تعاملات هوش مصنوعی و قابلیت‌های پیشرفته</li>
+    </ul>
+    <h2>ویژگی‌های در حال توسعه</h2>
+    <ul>
+      <li>متن و معرفی فارسی کامل</li>
+      <li>ساخت Pull Request نمونه و آموزشی</li>
+      <li>افزودن مثال‌های عملی آموزشی</li>
+    </ul>
+    <h2>ایده‌های آینده</h2>
+    <ul>
+      <li>ترجمه انگلیسی و دو زبانه شدن</li>
+      <li>افزودن ویدیو و تصویر برای آموزش بهتر</li>
+      <li>مستندسازی کامل برای مشارکت‌کنندگان</li>
+      <li>افزودن قابلیت‌های AI بیشتر و تجربه شخصی‌سازی شده</li>
+    </ul>
+  </section>
 
-  <h2>نکات حرفه‌ای</h2>
-  <ul>
-    <li>همیشه Branch جدا برای هر تغییر بسازید</li>
-    <li>پیام Commit کوتاه و واضح باشد</li>
-    <li>Pull Requestها را به Issue مرتبط کنید</li>
-    <li>Wiki و مستندات پروژه را تکمیل کنید تا سایر مشارکت‌کنندگان راحت‌تر کار کنند</li>
-  </ul>
+  <!-- ویکی ۴: Contributing Guide -->
+  <section id="contributing-guide">
+    <h1>راهنمای مشارکت در پروژه DeepLander</h1>
+    <ol>
+      <li>یک Issue مناسب انتخاب کنید</li>
+      <li>Branch جدید بسازید:
+        <pre><code>git checkout -b feature/your-feature-name</code></pre>
+      </li>
+      <li>تغییرات خود را اعمال کنید</li>
+      <li>Commit با پیام کوتاه:
+        <pre><code>git commit -m "Add Persian introduction section"</code></pre>
+      </li>
+      <li>Pull Request بسازید و توضیح دهید</li>
+    </ol>
+    <h2>قوانین حرفه‌ای</h2>
+    <ul>
+      <li>هر PR مرتبط با یک Issue باشد</li>
+      <li>Branch جدا برای هر تغییر ایجاد کنید</li>
+      <li>پیام Commit کوتاه و واضح باشد</li>
+      <li>از ساختار Markdown/HTML پروژه پیروی کنید</li>
+    </ul>
+  </section>
 
-  <p>
-    🔹 با دنبال کردن این چرخه عملی، کاربران می‌توانند GitHub را حرفه‌ای یاد بگیرند و به توسعه پروژه DeepLander کمک کنند.
-  </p>
-</section>
+  <!-- ویکی ۵: Learning GitHub -->
+  <section id="learning-github">
+    <h1>یادگیری GitHub با DeepLander</h1>
+    <ul>
+      <li><strong>Issues:</strong> مدیریت وظایف و باگ‌ها</li>
+      <li><strong>Pull Requests:</strong> ارائه تغییرات و بررسی کد</li>
+      <li><strong>Branches:</strong> ساخت مسیر مستقل برای توسعه</li>
+      <li><strong>Projects:</strong> مدیریت نقشه راه و وظایف</li>
+      <li><strong>Wiki:</strong> مستندسازی و ارائه راهنما</li>
+    </ul>
+    <h2>مثال عملی</h2>
+    <ol>
+      <li>Issue: "[Content] معرفی DeepLander"</li>
+      <li>Branch: <code>content/deeplander-introduction-fa</code></li>
+      <li>Commit:
+        <pre><code>git commit -m "Add Persian introduction section"</code></pre>
+      </li>
+      <li>Pull Request: Merge به main پس از بررسی</li>
+    </ol>
+  </section>
+
+</body>
+</html>
