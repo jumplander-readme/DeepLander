@@ -2,189 +2,128 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DeepLander Wiki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      font-family: "Tahoma", sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #2ecc71; /* سبز روشن */
-      color: #fff; /* متن سفید برای کنتراست */
-      text-align: center; /* وسط چین کردن متن */
-    }
-    section {
-      background-color: rgba(0,0,0,0.2); /* نیمه شفاف برای زیبایی */
-      border-radius: 12px;
-      padding: 25px;
-      margin: 30px auto;
-      width: 90%;
-      max-width: 900px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    h1 {
-      color: #fff;
-      margin-bottom: 15px;
-      font-size: 2em;
-    }
-    h2 {
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: #1b3d1b; /* سبز تیره */
       color: #f0f0f0;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-    ul, ol {
-      margin-left: 0;
-      display: inline-block;
-      text-align: left;
-    }
-    pre {
-      background-color: rgba(255,255,255,0.2);
-      padding: 10px;
-      border-radius: 6px;
-      overflow-x: auto;
-      text-align: left;
-    }
-    code {
-      font-family: monospace;
-      background-color: rgba(255,255,255,0.2);
-      padding: 2px 4px;
-      border-radius: 4px;
     }
     a {
-      color: #fff;
+      color: #a6e22e;
       text-decoration: underline;
     }
     a:hover {
-      color: #f0f0f0;
+      color: #ffffff;
+    }
+    section {
+      background-color: rgba(0,0,0,0.3);
+      padding: 2rem;
+      margin: 2rem auto;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+    pre {
+      background-color: rgba(255,255,255,0.1);
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: monospace;
     }
   </style>
 </head>
-<body>
+<body class="flex flex-col items-center">
 
-  <!-- ویکی ۱: Getting Started -->
+  <!-- Header -->
+  <header class="text-center my-10">
+    <h1 class="text-4xl font-bold text-green-400">DeepLander Wiki</h1>
+    <p class="text-lg text-green-200 mt-2">مرجع رسمی راهنما و مستندات پروژه DeepLander</p>
+    <nav class="mt-4 space-x-4">
+      <a href="#getting-started">شروع کار</a>
+      <a href="#about-deeplander">درباره پروژه</a>
+      <a href="#deeplander-roadmap">نقشه راه</a>
+      <a href="#contributing-guide">راهنمای مشارکت</a>
+      <a href="#learning-github">یادگیری GitHub</a>
+    </nav>
+  </header>
+
+  <!-- Sections -->
+
   <section id="getting-started">
-    <h1>شروع کار با DeepLander</h1>
-    <p>این صفحه راهنمای شروع سریع پروژه <strong>DeepLander</strong> است. هدف این بخش این است که هر کاربر، حتی بدون تجربه قبلی، بتواند پروژه را روی سیستم خود اجرا و بررسی کند.</p>
-    <h2>1️⃣ پیش‌نیازها</h2>
-    <ul>
+    <h2 class="text-2xl font-bold mb-4 text-green-300">شروع کار با DeepLander</h2>
+    <p class="mb-4">این بخش به کاربران کمک می‌کند پروژه را به سرعت اجرا کنند.</p>
+    <h3 class="font-semibold mt-4">پیش‌نیازها</h3>
+    <ul class="list-disc list-inside">
       <li>مرورگر مدرن: Chrome, Firefox, Safari یا Edge</li>
       <li>اتصال به اینترنت برای بارگذاری منابع آنلاین</li>
-      <li>Git نصب شده روی سیستم (برای کلون کردن ریپازیتوری)</li>
-      <li>توصیه حرفه‌ای: نصب Visual Studio Code یا هر ویرایشگر متن پیشرفته</li>
+      <li>Git نصب شده روی سیستم</li>
+      <li>توصیه: Visual Studio Code یا هر ویرایشگر متن پیشرفته</li>
     </ul>
-    <h2>2️⃣ کلون کردن ریپازیتوری</h2>
+
+    <h3 class="font-semibold mt-4">کلون کردن ریپازیتوری</h3>
     <pre><code>git clone https://github.com/jumplander-readme/DeepLander.git
 cd DeepLander</code></pre>
-    <h2>3️⃣ مشاهده پروژه</h2>
-    <ol>
-      <li>فایل <code>index.html</code> را در مرورگر باز کنید</li>
-      <li>یا از افزونه Live Server در VS Code استفاده کنید</li>
+
+    <h3 class="font-semibold mt-4">مشاهده پروژه</h3>
+    <ol class="list-decimal list-inside">
+      <li>باز کردن <code>index.html</code> در مرورگر</li>
+      <li>یا استفاده از Live Server در VS Code</li>
     </ol>
-    <h2>4️⃣ نکات حرفه‌ای</h2>
-    <ul>
-      <li>برای هر تغییر، Branch جداگانه بسازید:
-        <pre><code>git checkout -b feature/your-feature-name</code></pre>
-      </li>
-      <li>Commit با پیام کوتاه و واضح:
-        <pre><code>git commit -m "Add Persian introduction section for DeepLander"</code></pre>
-      </li>
-      <li>Pull Request بسازید تا تغییرات بررسی و Merge شود</li>
-    </ul>
-    <h2>5️⃣ منابع آموزشی مرتبط</h2>
-    <ul>
-      <li><a href="https://docs.github.com/en/get-started/quickstart" target="_blank" rel="noopener">GitHub Docs – Getting Started</a></li>
-      <li><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages Documentation</a></li>
-      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank" rel="noopener">HTML Basics – MDN</a></li>
-    </ul>
   </section>
 
-  <!-- ویکی ۲: About DeepLander -->
   <section id="about-deeplander">
-    <h1>About DeepLander</h1>
-    <p><strong>DeepLander</strong> یک وب‌سایت در حال توسعه است که با استفاده از <a href="https://jumplander.org" target="_blank" rel="noopener">هوش مصنوعی اختصاصی JumpLander</a> ساخته می‌شود.</p>
-    <p>هدف پروژه ارائه یک <strong>Landing Page هوشمند و آموزشی</strong> برای کاربران فارسی‌زبان است.</p>
-    <h2>اهداف اصلی پروژه</h2>
-    <ul>
-      <li>معرفی قابلیت‌ها و روش استفاده از هوش مصنوعی JumpLander</li>
-      <li>نمونه عملی Landing Page هوشمند و بهینه</li>
-      <li>آموزش GitHub و فرآیند مشارکت در پروژه</li>
-    </ul>
-    <h2>اهمیت برای کاربران فارسی‌زبان</h2>
-    <ul>
-      <li>پشتیبانی کامل از راست‌به‌چپ (RTL)</li>
-      <li>متن و لحن فارسی قابل فهم</li>
-      <li>نمونه واقعی از پروژه در حال توسعه</li>
-      <li>افزایش آگاهی از کاربردهای هوش مصنوعی</li>
+    <h2 class="text-2xl font-bold mb-4 text-green-300">درباره DeepLander</h2>
+    <p><strong>DeepLander</strong> یک وب‌سایت هوشمند ساخته شده با <a href="https://jumplander.org" target="_blank">هوش مصنوعی JumpLander</a> است.</p>
+    <h3 class="font-semibold mt-4">اهداف اصلی</h3>
+    <ul class="list-disc list-inside">
+      <li>معرفی قابلیت‌های JumpLander</li>
+      <li>نمونه عملی Landing Page هوشمند</li>
+      <li>آموزش GitHub و مشارکت در پروژه</li>
     </ul>
   </section>
 
-  <!-- ویکی ۳: Roadmap -->
   <section id="deeplander-roadmap">
-    <h1>Roadmap پروژه DeepLander</h1>
-    <ul>
-      <li><strong>MVP – معرفی اولیه:</strong> آماده‌سازی بخش معرفی و اولین نسخه HTML فارسی</li>
-      <li><strong>نسخه 1.1:</strong> اضافه کردن آموزش HTML/CSS و نکات GitHub</li>
+    <h2 class="text-2xl font-bold mb-4 text-green-300">نقشه راه پروژه</h2>
+    <ul class="list-disc list-inside">
+      <li><strong>MVP:</strong> نسخه اولیه HTML فارسی</li>
+      <li><strong>نسخه 1.1:</strong> آموزش HTML/CSS و GitHub</li>
       <li><strong>نسخه 1.2:</strong> بهبود UX و ریسپانسیو</li>
-      <li><strong>نسخه 2.0:</strong> افزودن تعاملات هوش مصنوعی و قابلیت‌های پیشرفته</li>
-    </ul>
-    <h2>ویژگی‌های در حال توسعه</h2>
-    <ul>
-      <li>متن و معرفی فارسی کامل</li>
-      <li>ساخت Pull Request نمونه و آموزشی</li>
-      <li>افزودن مثال‌های عملی آموزشی</li>
-    </ul>
-    <h2>ایده‌های آینده</h2>
-    <ul>
-      <li>ترجمه انگلیسی و دو زبانه شدن</li>
-      <li>افزودن ویدیو و تصویر برای آموزش بهتر</li>
-      <li>مستندسازی کامل برای مشارکت‌کنندگان</li>
-      <li>افزودن قابلیت‌های AI بیشتر و تجربه شخصی‌سازی شده</li>
+      <li><strong>نسخه 2.0:</strong> افزودن تعاملات هوش مصنوعی</li>
     </ul>
   </section>
 
-  <!-- ویکی ۴: Contributing Guide -->
   <section id="contributing-guide">
-    <h1>راهنمای مشارکت در پروژه DeepLander</h1>
-    <ol>
-      <li>یک Issue مناسب انتخاب کنید</li>
+    <h2 class="text-2xl font-bold mb-4 text-green-300">راهنمای مشارکت</h2>
+    <ol class="list-decimal list-inside">
+      <li>یک Issue انتخاب کنید</li>
       <li>Branch جدید بسازید:
         <pre><code>git checkout -b feature/your-feature-name</code></pre>
       </li>
-      <li>تغییرات خود را اعمال کنید</li>
+      <li>تغییرات را اعمال کنید</li>
       <li>Commit با پیام کوتاه:
         <pre><code>git commit -m "Add Persian introduction section"</code></pre>
       </li>
-      <li>Pull Request بسازید و توضیح دهید</li>
+      <li>Pull Request بسازید</li>
     </ol>
-    <h2>قوانین حرفه‌ای</h2>
-    <ul>
-      <li>هر PR مرتبط با یک Issue باشد</li>
-      <li>Branch جدا برای هر تغییر ایجاد کنید</li>
-      <li>پیام Commit کوتاه و واضح باشد</li>
-      <li>از ساختار Markdown/HTML پروژه پیروی کنید</li>
+  </section>
+
+  <section id="learning-github">
+    <h2 class="text-2xl font-bold mb-4 text-green-300">یادگیری GitHub با DeepLander</h2>
+    <ul class="list-disc list-inside">
+      <li><strong>Issues:</strong> مدیریت وظایف و باگ‌ها</li>
+      <li><strong>Pull Requests:</strong> ارائه تغییرات و بررسی کد</li>
+      <li><strong>Branches:</strong> مسیر مستقل برای توسعه</li>
+      <li><strong>Wiki:</strong> مستندسازی و راهنما</li>
     </ul>
   </section>
 
-  <!-- ویکی ۵: Learning GitHub -->
-  <section id="learning-github">
-    <h1>یادگیری GitHub با DeepLander</h1>
-    <ul>
-      <li><strong>Issues:</strong> مدیریت وظایف و باگ‌ها</li>
-      <li><strong>Pull Requests:</strong> ارائه تغییرات و بررسی کد</li>
-      <li><strong>Branches:</strong> ساخت مسیر مستقل برای توسعه</li>
-      <li><strong>Projects:</strong> مدیریت نقشه راه و وظایف</li>
-      <li><strong>Wiki:</strong> مستندسازی و ارائه راهنما</li>
-    </ul>
-    <h2>مثال عملی</h2>
-    <ol>
-      <li>Issue: "[Content] معرفی DeepLander"</li>
-      <li>Branch: <code>content/deeplander-introduction-fa</code></li>
-      <li>Commit:
-        <pre><code>git commit -m "Add Persian introduction section"</code></pre>
-      </li>
-      <li>Pull Request: Merge به main پس از بررسی</li>
-    </ol>
-  </section>
+  <footer class="my-10 text-green-200">
+    © 2025 DeepLander Wiki
+  </footer>
 
 </body>
 </html>
