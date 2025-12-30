@@ -1,0 +1,6 @@
+# اجازه ایندکس تمام سایت
+User-agent: *
+Allow: /
+
+# لینک به سایت‌مپ XML
+Sitemap: https://jumplander-readme.github.io/DeepLander/sitemap.xml
