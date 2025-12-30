@@ -2,44 +2,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  const head = document.head;
 
-  <title>JumpLander | زیرساخت هوش مصنوعی توسعه نرم‌افزار</title>
-
-  <!-- SEO Base -->
-  <meta name="description" content="جامپ‌لندر (JumpLander) زیرساخت هوش مصنوعی برای توسعه نرم‌افزار است؛ ارائه‌دهنده مدل‌های زبانی تخصصی کدنویسی، Reasoning و ابزارهای هوشمند برای برنامه‌نویسان فارسی‌زبان." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://jumplander-readme.github.io/DeepLander/" />
-  <meta http-equiv="content-language" content="fa-IR" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="JumpLander | زیرساخت هوش مصنوعی توسعه نرم‌افزار" />
-  <meta property="og:description" content="پلتفرم مدل‌های هوش مصنوعی تخصصی کدنویسی و استدلال برای توسعه‌دهندگان فارسی‌زبان." />
-  <meta property="og:url" content="https://jumplander-readme.github.io/DeepLander/" />
-  <meta property="og:site_name" content="JumpLander" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="JumpLander | AI Coding Infrastructure" />
-  <meta name="twitter:description" content="مدل‌های هوش مصنوعی کدنویسی برای برنامه‌نویسان فارسی." />
-
-  <!-- Google Search Console -->
-  <meta name="google-site-verification" content="کد-واقعی-گوگل-اینجا" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "JumpLander",
-    "url": "https://jumplander.org",
-    "description": "زیرساخت هوش مصنوعی و مدل‌های زبانی تخصصی برنامه‌نویسی برای فارسی‌زبانان",
-    "sameAs": [
-      "https://github.com/jumplander-readme"
-    ]
+  function addMeta(attrs) {
+    const meta = document.createElement('meta');
+    Object.keys(attrs).forEach(key => meta.setAttribute(key, attrs[key]));
+    head.appendChild(meta);
   }
-  </script>
-</head>
+
+  function addLink(attrs) {
+    const link = document.createElement('link');
+    Object.keys(attrs).forEach(key => link.setAttribute(key, attrs[key]));
+    head.appendChild(link);
+  }
+
+  // ===== Title =====
+  document.title = "JumpLander | زیرساخت هوش مصنوعی توسعه نرم‌افزار";
+
+  // ===== Basic SEO =====
+  addMeta({
+    name: "description",
+    content: "جامپ‌لندر (JumpLander) زیرساخت هوش مصنوعی برای توسعه نرم‌افزار است. مدل‌های هوش مصنوعی کدنویسی و Reasoning این پلتفرم در حال توسعه بوده و به‌زودی به‌صورت عمومی ارائه می‌شوند."
+  });
+
+  addMeta({ name: "robots", content: "index, follow" });
+  addMeta({ "http-equiv": "content-language", content: "fa-IR" });
+
+  // ===== Keywords (واقعی، نه اسپم) =====
+  addMeta({
+    name: "keywords",
+    content: "JumpLander, جامپ لندر, هوش مصنوعی برنامه نویسی, AI Coding, مدل زبانی فارسی, LLM فارسی, هوش مصنوعی کدنویسی, پلتفرم AI توسعه نرم افزار"
+  });
+
+  // ===== Canonical =====
+  addLink({
+    rel: "canonical",
+    href: "https://jumplander-readme.github.io/DeepLander/"
+  });
+
+  // ===== Open Graph =====
+  addMeta({ property: "og:type", content: "website" });
+  addMeta({ property: "og:title", content: "JumpLander | زیرساخت هوش مصنوعی توسعه نرم‌افزار" });
+  addMeta({
+    property: "og:description",
+    content: "پلتفرم مدل‌های هوش مصنوعی تخصصی کدنویسی. مدل‌ها در حال توسعه هستند و به‌زودی در دسترس قرار می‌گیرند."
+  });
+  addMeta({ property: "og:url", content: "https://jumplander-readme.github.io/DeepLander/" });
+  addMeta({ property: "og:site_name", content: "JumpLander" });
+
+  // ===== Twitter =====
+  addMeta({ name: "twitter:card", content: "summary_large_image" });
+  addMeta({ name: "twitter:title", content: "JumpLander | AI Coding Infrastructure" });
+  addMeta({
+    name: "twitter:description",
+    content: "AI Coding Models for Persian Developers (Under Development)"
+  });
+
+  // ===== Structured Data =====
+  const ld = document.createElement("script");
+  ld.type = "application/ld+json";
+  ld.text = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "JumpLander",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web",
+    "description": "زیرساخت هوش مصنوعی برای توسعه نرم‌افزار. مدل‌های کدنویسی در حال توسعه هستند.",
+    "url": "https://jumplander.org",
+    "creator": {
+      "@type": "Organization",
+      "name": "JumpLander"
+    }
+  });
+  head.appendChild(ld);
+
+})();
+</script>
+
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
